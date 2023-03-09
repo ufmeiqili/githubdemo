@@ -1,28 +1,37 @@
-def encode(): # might have parameters
-    # write encode function up here
-    # might return something
+def menu():
+    print("Menu")
+    print("-------------")
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quiz")
+
+def encode(password):
+    encoded_password = ""
+    for i in str(password):
+        i = int(i)
+        i += 3
+        encoded_password += str(i)
+
+    print("Your password has been encoded and stored!")
+    return encoded_password
+
+def decode(encoded_password):
     pass
-    # hello
-def func():
-    print(x)
 
 def main():
-    try:
-        num = int(input("Enter a number: "))
-        if num < 0:
-            raise ValueError("Please enter a non negative number")
+    while True:
+        menu()
+        print()
+        option = int(input("Please enter an option: "))
+        if option == 1:
+            password = int(input("Please enter your password to encode: "))
+            encoded_password = encode(password)
+            print()
+        elif option == 2:
+            pass
+        elif option == 3:
+            break
 
-    except ValueError as problem:
-        print(problem)
-
-    i_sum = 0
-    for i in range(num):
-        i_sum += 1
-        func(i)
-    # print menu using a while loop
-    # ask for menu input
-    # ask for a password if input is 1
-    pass
 
 if __name__ == "__main__":
     main()
