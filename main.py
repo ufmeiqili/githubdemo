@@ -2,7 +2,7 @@ def encode(): # might have parameters
     # write encode function up here
     # might return something
     pass
-
+    # hello
 def func():
     print(x)
 
